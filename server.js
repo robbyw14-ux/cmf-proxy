@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 app.get("/browse", async (req, res) => {
   const url = req.query.url;
 
-  if (!url || !/^https?:\\/\\//i.test(url)) {
+  if (!url || !/^https?:\/\//i.test(url)) {
     return res.status(400).send("Enter a valid URL.");
   }
 
